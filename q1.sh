@@ -7,8 +7,8 @@ if [ -d "$directory" ]; then
     # Check if the folder contains any log files
     if [ ! -z "${content}" ]; then
     # Write the log files to a file name 'temp.txt'
+    
         printf "${content}" > temp.txt
-
         # Go over each log file listed in the temp file and search how many lines contain
         # the word ERROR and print them to the screen
         grep -c ".*ERROR.*" $content
